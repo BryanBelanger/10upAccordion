@@ -1,3 +1,3 @@
-# 10up Component Name
+# 10up Component Accordion
 
-This is a scaffold for building new components for the 10up Component Library.
+This is a scaffold for building new components for the 10up Component Accordion.
