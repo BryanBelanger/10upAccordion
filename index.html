@@ -1,0 +1,51 @@
+<!doctype html>
+<html class="js">
+	<head>
+		<title>10up Accordion</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href="dist/component-accordion.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="TenUp_Accordion">
+
+			<button class="accordion-header" type="button">
+				Accordion Header
+			</button>
+
+			<div class="accordion-content">
+				<h2 class="accordion-label">
+					Accordion Heading
+				</h2>
+				<p>
+					here the content of 1st tab
+				</p>
+			</div> <!-- //.accordion-content -->
+
+			<button class="accordion-header" type="button">
+				Accordion Header
+			</button>
+
+			<div class="accordion-content">
+				<h2 class="accordion-label">
+					Accordion Heading
+				</h2>
+				<p>
+					here the content of 2nd tab
+				</p>
+			</div> <!-- //.accordion-content -->
+
+		</div> <!-- //.accordion -->
+
+		<script src="dist/component-accordion.js"></script>
+
+		<script>
+			let componentInstance = new TenUp.ComponentAccordion( {
+				target: '.TenUp_Accordion', // ID (or class) of accordion container
+			}, function() {
+				console.log( 'Amazing callback function!' );
+			} );
+		</script>
+	</body>
+</html>
