@@ -3,15 +3,15 @@
  Name: WordPress Accessible Accordion
  Usage:
 
- TenUp.accordion( {
-		target: '.accordion', // ID (or class) of accordion container
+ 	let componentInstance = new TenUp.ComponentAccordion( {
+		target: '.TenUp_Accordion', // ID (or class) of accordion container
 	}, function() {
 		console.log( 'Amazing callback function!' );
 	} );
 
  ********************************/
 
-'use strict'
+'use strict';
 
 const init = ( options, callback ) => {
 
@@ -30,7 +30,6 @@ const init = ( options, callback ) => {
 	let	accordionContent  = accordion.querySelectorAll( '.accordion-content' );
 
 	accordionHeaders.forEach( ( header, i ) => {
-
 		// Set ARIA and ID attributes
 		header.setAttribute( 'id', 'tab' + '-' + i );
 		header.setAttribute( 'aria-selected', 'false' );
@@ -56,12 +55,14 @@ const init = ( options, callback ) => {
 };
 
 const eventListenerHandle = ( target ) => {
+
 	target.addEventListener( 'click', function() {
 		accordionHandle( target );
 	} );
+
 };
 
-let accordionHandle = ( accordion ) => {
+const accordionHandle = ( accordion ) => {
 
 	let nextPanel = accordion.nextElementSibling;
 	let nextPanelLabel = nextPanel.getElementsByClassName( 'accordion-label' )[0];
